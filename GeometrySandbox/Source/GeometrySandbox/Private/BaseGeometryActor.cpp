@@ -2,7 +2,9 @@
 
 
 #include "BaseGeometryActor.h"
-#include "GeometrySandbox/Public/BaseGeometryActor.h"
+#include "Engine/Engine.h"
+
+DEFINE_LOG_CATEGORY_STATIC(LogBaseGeometry, All, All);
 
 // Sets default values
 ABaseGeometryActor::ABaseGeometryActor()
@@ -17,6 +19,7 @@ void ABaseGeometryActor::BeginPlay()
 {
 	Super::BeginPlay();
 
+	PrintStringTypes();
 	PrintTypes();
 }
 
@@ -42,3 +45,22 @@ void ABaseGeometryActor::PrintTypes()
 	UE_LOG(LogTemp, Display, TEXT("HasWeapon: %d"), static_cast<int>(HasWeapon));
 }
 
+void ABaseGeometryActor::PrintStringTypes()
+{
+	FString Name = "Some Name";
+	UE_LOG(LogBaseGeometry, Display, TEXT("Name: %s"), *Name);
+
+	int WeaponsNum = 4;
+	float Health = 43.58999f;
+	bool IsDead = false;
+
+	FString WeaponsNumStr = "Weapons num: " + FString::FromInt(WeaponsNum);
+	FString HealthStr = "Health: " + FString::SanitizeFloat(Health, 2);//Второй параметр отвечает за количество строк после запятой
+	FString IsDeadStr = "IsDead: " + FString(IsDead ? "true" : "false");
+
+	FString Stat = FString::Printf(TEXT("All:\n %s, %s, %s"), *WeaponsNumStr, *HealthStr, *IsDeadStr);
+	UE_LOG(LogBaseGeometry, Display, TEXT("%s"), *Stat);
+
+	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Red, Name);
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, Stat, true, FVector2D(1.5f, 1.5f));
+}

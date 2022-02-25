@@ -25,5 +25,5 @@ public:
 
 private:
 	void PrintTypes();
-
+	void PrintStringTypes();
 };
