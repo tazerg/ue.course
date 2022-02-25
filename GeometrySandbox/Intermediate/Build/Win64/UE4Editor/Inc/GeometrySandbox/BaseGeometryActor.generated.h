@@ -58,7 +58,14 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ABaseGeometryActor)
 
 
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_12_PRIVATE_PROPERTY_OFFSET
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_12_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__WeaponsNum() { return STRUCT_OFFSET(ABaseGeometryActor, WeaponsNum); } \
+	FORCEINLINE static uint32 __PPO__KillsNum() { return STRUCT_OFFSET(ABaseGeometryActor, KillsNum); } \
+	FORCEINLINE static uint32 __PPO__Health() { return STRUCT_OFFSET(ABaseGeometryActor, Health); } \
+	FORCEINLINE static uint32 __PPO__IsDead() { return STRUCT_OFFSET(ABaseGeometryActor, IsDead); } \
+	FORCEINLINE static uint32 __PPO__HasWeapon() { return STRUCT_OFFSET(ABaseGeometryActor, HasWeapon); }
+
+
 #define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_9_PROLOG
 #define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

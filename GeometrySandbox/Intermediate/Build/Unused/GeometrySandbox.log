@@ -1,21 +1,18 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\UnrealEngine_Projects\ue.course).
-  Deleted hot-reload file: C:\UnrealEngine_Projects\ue.course\GeometrySandbox\Binaries\Win64\UE4Editor-GeometrySandbox-2402.dll
-  Deleted hot-reload file: C:\UnrealEngine_Projects\ue.course\GeometrySandbox\Binaries\Win64\UE4Editor-GeometrySandbox-2402.pdb
-  Deleted hot-reload file: C:\UnrealEngine_Projects\ue.course\GeometrySandbox\Binaries\Win64\UE4Editor-GeometrySandbox-3756.dll
-  Deleted hot-reload file: C:\UnrealEngine_Projects\ue.course\GeometrySandbox\Binaries\Win64\UE4Editor-GeometrySandbox-3756.pdb
-  Deleted hot-reload file: C:\UnrealEngine_Projects\ue.course\GeometrySandbox\Binaries\Win64\UE4Editor-GeometrySandbox-6979.dll
-  Deleted hot-reload file: C:\UnrealEngine_Projects\ue.course\GeometrySandbox\Binaries\Win64\UE4Editor-GeometrySandbox-6979.pdb
-  Deleted hot-reload file: C:\UnrealEngine_Projects\ue.course\GeometrySandbox\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandbox\UE4Editor-GeometrySandbox-2402.lib
-  Deleted hot-reload file: C:\UnrealEngine_Projects\ue.course\GeometrySandbox\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandbox\UE4Editor-GeometrySandbox-3756.lib
-  Deleted hot-reload file: C:\UnrealEngine_Projects\ue.course\GeometrySandbox\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandbox\UE4Editor-GeometrySandbox-6979.lib
+  Parsing headers for GeometrySandboxEditor
+    Running UnrealHeaderTool "C:\UnrealEngine_Projects\ue.course\GeometrySandbox\GeometrySandbox.uproject" "C:\UnrealEngine_Projects\ue.course\GeometrySandbox\Intermediate\Build\Win64\GeometrySandboxEditor\Development\GeometrySandboxEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\PC\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+  LogInit: Display: Loading text-based GConfig....
+  Reflection code generated for GeometrySandboxEditor in 4,5853783 seconds
   Building GeometrySandboxEditor...
   Using Visual Studio 2019 14.29.30140 toolchain (C:\Program Files\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 4 actions with 8 processes...
-    [1/4] BaseGeometryActor.cpp
-    [2/4] UE4Editor-GeometrySandbox.lib
+  Building 6 actions with 8 processes...
+    [1/6] GeometrySandbox.init.gen.cpp
+    [2/6] BaseGeometryActor.cpp
+    [3/6] BaseGeometryActor.gen.cpp
+    [4/6] UE4Editor-GeometrySandbox.lib
        Создается библиотека C:\UnrealEngine_Projects\ue.course\GeometrySandbox\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandbox\UE4Editor-GeometrySandbox.lib и объект C:\UnrealEngine_Projects\ue.course\GeometrySandbox\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandbox\UE4Editor-GeometrySandbox.exp
-    [3/4] UE4Editor-GeometrySandbox.dll
+    [5/6] UE4Editor-GeometrySandbox.dll
        Создается библиотека C:\UnrealEngine_Projects\ue.course\GeometrySandbox\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandbox\UE4Editor-GeometrySandbox.suppressed.lib и объект C:\UnrealEngine_Projects\ue.course\GeometrySandbox\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandbox\UE4Editor-GeometrySandbox.suppressed.exp
-    [4/4] GeometrySandboxEditor.target
-  Total time in Parallel executor: 7,52 seconds
-  Total execution time: 8,39 seconds
+    [6/6] GeometrySandboxEditor.target
+  Total time in Parallel executor: 1,94 seconds
+  Total execution time: 7,34 seconds

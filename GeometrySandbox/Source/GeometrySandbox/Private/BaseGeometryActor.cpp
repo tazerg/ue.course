@@ -27,20 +27,13 @@ void ABaseGeometryActor::BeginPlay()
 void ABaseGeometryActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 void ABaseGeometryActor::PrintTypes()
 {
-	int WeaponsNum = 4;
-	int KillsNum = 7;
-	float Health = 43.58999f;
-	bool IsDead = false;
-	bool HasWeapon = true;
-
+	UE_LOG(LogTemp, Display, TEXT("Actor name: %s"), *GetName());
 	UE_LOG(LogTemp, Display, TEXT("Weapons num: %d; Kills num: %i"), WeaponsNum, KillsNum);
 	UE_LOG(LogTemp, Display, TEXT("Health: %f"), Health);
-	UE_LOG(LogTemp, Display, TEXT("Health: %.2f"), Health);
 	UE_LOG(LogTemp, Display, TEXT("IsDead: %d"), IsDead);
 	UE_LOG(LogTemp, Display, TEXT("HasWeapon: %d"), static_cast<int>(HasWeapon));
 }
@@ -49,10 +42,6 @@ void ABaseGeometryActor::PrintStringTypes()
 {
 	FString Name = "Some Name";
 	UE_LOG(LogBaseGeometry, Display, TEXT("Name: %s"), *Name);
-
-	int WeaponsNum = 4;
-	float Health = 43.58999f;
-	bool IsDead = false;
 
 	FString WeaponsNumStr = "Weapons num: " + FString::FromInt(WeaponsNum);
 	FString HealthStr = "Health: " + FString::SanitizeFloat(Health, 2);//Второй параметр отвечает за количество строк после запятой
