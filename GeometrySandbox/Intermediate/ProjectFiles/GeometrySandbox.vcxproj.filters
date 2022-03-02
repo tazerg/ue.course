@@ -53,5 +53,6 @@
     <ClInclude Include="..\..\Source\GeometrySandbox\Public\BaseGeometryActor.h">
       <Filter>Source\GeometrySandbox\Public</Filter>
     </ClInclude>
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>

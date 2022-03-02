@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GEOMETRYSANDBOX_BaseGeometryActor_generated_h
 
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_12_SPARSE_DATA
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_12_RPC_WRAPPERS
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_12_RPC_WRAPPERS_NO_PURE_DECLS
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_12_INCLASS_NO_PURE_DECLS \
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_13_SPARSE_DATA
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_13_RPC_WRAPPERS
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_13_RPC_WRAPPERS_NO_PURE_DECLS
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABaseGeometryActor(); \
 	friend struct Z_Construct_UClass_ABaseGeometryActor_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(ABaseGeometryActor)
 
 
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_12_INCLASS \
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_13_INCLASS \
 private: \
 	static void StaticRegisterNativesABaseGeometryActor(); \
 	friend struct Z_Construct_UClass_ABaseGeometryActor_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(ABaseGeometryActor)
 
 
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_12_STANDARD_CONSTRUCTORS \
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_13_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ABaseGeometryActor(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ABaseGeometryActor) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_12_ENHANCED_CONSTRUCTORS \
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ABaseGeometryActor(ABaseGeometryActor&&); \
@@ -58,7 +58,9 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ABaseGeometryActor)
 
 
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_12_PRIVATE_PROPERTY_OFFSET \
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_13_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__Amplitude() { return STRUCT_OFFSET(ABaseGeometryActor, Amplitude); } \
+	FORCEINLINE static uint32 __PPO__Frequency() { return STRUCT_OFFSET(ABaseGeometryActor, Frequency); } \
 	FORCEINLINE static uint32 __PPO__WeaponsNum() { return STRUCT_OFFSET(ABaseGeometryActor, WeaponsNum); } \
 	FORCEINLINE static uint32 __PPO__KillsNum() { return STRUCT_OFFSET(ABaseGeometryActor, KillsNum); } \
 	FORCEINLINE static uint32 __PPO__Health() { return STRUCT_OFFSET(ABaseGeometryActor, Health); } \
@@ -66,27 +68,27 @@ public: \
 	FORCEINLINE static uint32 __PPO__HasWeapon() { return STRUCT_OFFSET(ABaseGeometryActor, HasWeapon); }
 
 
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_9_PROLOG
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_12_GENERATED_BODY_LEGACY \
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_10_PROLOG
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_13_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_12_PRIVATE_PROPERTY_OFFSET \
-	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_12_SPARSE_DATA \
-	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_12_RPC_WRAPPERS \
-	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_12_INCLASS \
-	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_12_STANDARD_CONSTRUCTORS \
+	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_13_PRIVATE_PROPERTY_OFFSET \
+	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_13_SPARSE_DATA \
+	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_13_RPC_WRAPPERS \
+	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_13_INCLASS \
+	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_13_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_12_GENERATED_BODY \
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_12_PRIVATE_PROPERTY_OFFSET \
-	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_12_SPARSE_DATA \
-	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_12_INCLASS_NO_PURE_DECLS \
-	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_12_ENHANCED_CONSTRUCTORS \
+	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_13_PRIVATE_PROPERTY_OFFSET \
+	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_13_SPARSE_DATA \
+	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_13_INCLASS_NO_PURE_DECLS \
+	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
