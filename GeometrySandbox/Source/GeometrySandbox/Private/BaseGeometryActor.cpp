@@ -33,14 +33,7 @@ void ABaseGeometryActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	//z = z0 + amplitude * sin(freq * t)
-
-	FVector CurrentLocation = GetActorLocation();
-	//GetTimeSeconds - возвращает количество секунд прошедших с момента старта игры
-	float time = GetWorld()->GetTimeSeconds();
-	CurrentLocation.Z = InitialLocation.Z + Amplitude * FMath::Sin(Frequency * time);
-	
-	SetActorLocation(CurrentLocation);
+	HandleMovement();
 }
 
 void ABaseGeometryActor::PrintTypes()
@@ -83,4 +76,33 @@ void ABaseGeometryActor::PrintTransform()
 	UE_LOG(LogTemp, Display, TEXT("Actor scale: %s"), *scale.ToString());
 
 	UE_LOG(LogTemp, Display, TEXT("Actor human readable transform: %s"), *transform.ToHumanReadableString());
+}
+
+void ABaseGeometryActor::HandleMovement() 
+{
+	switch (MovementData.MoveType)
+	{
+	case EMovementType::Sin:
+	{
+		//z = z0 + amplitude * sin(freq * t)
+
+		FVector CurrentLocation = GetActorLocation();
+		//GetTimeSeconds - возвращает количество секунд прошедших с момента старта игры
+		float Time = GetWorld()->GetTimeSeconds();
+		CurrentLocation.Z = InitialLocation.Z + MovementData.Amplitude * FMath::Sin(MovementData.Frequency * Time);
+
+		SetActorLocation(CurrentLocation);
+
+		break;
+	}
+	case EMovementType::Static:
+	{
+		break;
+	}
+
+	default:
+	{
+		break;
+	}
+	}
 }
