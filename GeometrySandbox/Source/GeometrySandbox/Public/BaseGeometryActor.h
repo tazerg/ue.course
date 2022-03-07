@@ -51,6 +51,16 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* BaseMeshComponent;
 
+	void SetMovementData(const FGeometryData& Data) 
+	{
+		MovementData = Data;
+	}
+
+	void SetMaterialData(const FMaterialData& Data) 
+	{
+		MaterialData = Data;
+	}
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
