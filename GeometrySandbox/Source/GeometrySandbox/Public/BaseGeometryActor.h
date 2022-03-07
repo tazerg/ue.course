@@ -57,6 +57,9 @@ protected:
 	UPROPERTY(VisibleAnywhere, Category = "Weapon")
 	bool HasWeapon = true;
 
+	UPROPERTY(EditAnywhere, Category = "Material")
+	FLinearColor Color = FLinearColor::Black;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -67,4 +70,5 @@ private:
 	void PrintStringTypes();
 	void PrintTransform();
 	void HandleMovement();
+	void SetMaterialColor(const FLinearColor& NewColor);
 };

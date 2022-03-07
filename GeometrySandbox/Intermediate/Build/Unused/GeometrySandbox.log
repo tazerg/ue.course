@@ -2,7 +2,7 @@
   Parsing headers for GeometrySandboxEditor
     Running UnrealHeaderTool "C:\UnrealEngine_Projects\ue.course\GeometrySandbox\GeometrySandbox.uproject" "C:\UnrealEngine_Projects\ue.course\GeometrySandbox\Intermediate\Build\Win64\GeometrySandboxEditor\Development\GeometrySandboxEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\PC\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
   LogInit: Display: Loading text-based GConfig....
-  Reflection code generated for GeometrySandboxEditor in 4,558391 seconds
+  Reflection code generated for GeometrySandboxEditor in 15,6528912 seconds
   Building GeometrySandboxEditor...
   Using Visual Studio 2019 14.29.30140 toolchain (C:\Program Files\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
   Building 6 actions with 8 processes...
@@ -14,5 +14,5 @@
     [5/6] UE4Editor-GeometrySandbox.dll
        Создается библиотека C:\UnrealEngine_Projects\ue.course\GeometrySandbox\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandbox\UE4Editor-GeometrySandbox.suppressed.lib и объект C:\UnrealEngine_Projects\ue.course\GeometrySandbox\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandbox\UE4Editor-GeometrySandbox.suppressed.exp
     [6/6] GeometrySandboxEditor.target
-  Total time in Parallel executor: 1,81 seconds
-  Total execution time: 7,30 seconds
+  Total time in Parallel executor: 2,11 seconds
+  Total execution time: 18,57 seconds
