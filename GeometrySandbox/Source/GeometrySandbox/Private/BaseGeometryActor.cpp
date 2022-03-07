@@ -4,6 +4,7 @@
 #include "BaseGeometryActor.h"
 #include "Engine/Engine.h"
 #include "Materials/MaterialInstanceDynamic.h"
+#include "TimerManager.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogBaseGeometry, All, All);
 
@@ -28,7 +29,9 @@ void ABaseGeometryActor::BeginPlay()
 	PrintStringTypes();
 	PrintTransform();
 
-	SetMaterialColor(Color);
+	SetMaterialColor(MaterialData.Color);
+
+	GetWorldTimerManager().SetTimer(TimerHandle, this, &ABaseGeometryActor::OnTimerFired, MaterialData.TimerFrequency, true);
 }
 
 // Called every frame
@@ -119,4 +122,24 @@ void ABaseGeometryActor::SetMaterialColor(const FLinearColor& NewColor)
 	}
 
 	Material->SetVectorParameterValue("Color", NewColor);
+}
+
+//Функция обработчик таймера.
+//Если таймер отработал TimerCount раз, то происходит отписка
+//от срабатывания обработчика
+void ABaseGeometryActor::OnTimerFired()
+{
+	if (TimerCount >= TimerMaxCount) 
+	{
+		GetWorldTimerManager().ClearTimer(TimerHandle);
+		UE_LOG(LogBaseGeometry, Warning, TEXT("Timer has been stopped"));
+		return;
+	}
+
+	const FLinearColor NewColor = FLinearColor::MakeRandomColor();
+	SetMaterialColor(NewColor);
+
+	TimerCount++;
+
+	UE_LOG(LogBaseGeometry, Display, TEXT("Timer is fired. Timer fire count: %i; New color: %s"), TimerCount,  *NewColor.ToString());
 }

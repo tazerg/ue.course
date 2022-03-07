@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\GeometrySandbox.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{6488D599-6966-4413-BEB4-AE392572F876}</UniqueIdentifier>
+      <UniqueIdentifier>{CD196AC5-B23F-4B11-BFB4-CAB9C96C8D82}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GeometrySandbox.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{ED396A65-260E-4FAF-9643-5D4FF3E2D585}</UniqueIdentifier>
+      <UniqueIdentifier>{D8E30331-10D9-461C-9116-A4ED2762941C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -24,7 +24,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\GeometrySandbox">
-      <UniqueIdentifier>{C855DD4C-90B5-4B24-A7E1-7653FD4D2D55}</UniqueIdentifier>
+      <UniqueIdentifier>{FC3508B9-6A6B-4E52-A858-3029AE3760D7}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GeometrySandbox\GeometrySandbox.Build.cs">
       <Filter>Source\GeometrySandbox</Filter>
@@ -42,17 +42,22 @@
       <Filter>Source\GeometrySandbox</Filter>
     </ClInclude>
     <Filter Include="Source\GeometrySandbox\Private">
-      <UniqueIdentifier>{18EE6CE4-9E32-4E52-8B6C-45C57E43E9F4}</UniqueIdentifier>
+      <UniqueIdentifier>{3BD918DB-3B62-4897-9344-1221301F0DF3}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\GeometrySandbox\Private\BaseGeometryActor.cpp">
       <Filter>Source\GeometrySandbox\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\GeometrySandbox\Private\GeometryHubActor.cpp">
+      <Filter>Source\GeometrySandbox\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\GeometrySandbox\Public">
-      <UniqueIdentifier>{1DD09303-C9D2-4CC9-B17C-DC6328B3B14F}</UniqueIdentifier>
+      <UniqueIdentifier>{003C7CE5-D747-4BF1-A3CD-165FEF56F62C}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\GeometrySandbox\Public\BaseGeometryActor.h">
       <Filter>Source\GeometrySandbox\Public</Filter>
     </ClInclude>
-    <None Include="cpp.hint" />
+    <ClInclude Include="..\..\Source\GeometrySandbox\Public\GeometryHubActor.h">
+      <Filter>Source\GeometrySandbox\Public</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -27,6 +27,18 @@ struct FGeometryData
 	EMovementType MoveType = EMovementType::Static;
 };
 
+USTRUCT(BlueprintType)
+struct FMaterialData 
+{
+	GENERATED_USTRUCT_BODY()
+
+	UPROPERTY(EditAnywhere, Category = "Material")
+	FLinearColor Color = FLinearColor::Black;
+
+	UPROPERTY(EditAnywhere, Category = "Material")
+	float TimerFrequency = 3.0f;
+};
+
 UCLASS()
 class GEOMETRYSANDBOX_API ABaseGeometryActor : public AActor
 {
@@ -46,6 +58,9 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "GeometryData")
 	FGeometryData MovementData;
 
+	UPROPERTY(EditAnywhere, Category = "MaterialData")
+	FMaterialData MaterialData;
+
 	UPROPERTY(EditAnywhere, Category = "Weapon")
 	int32 WeaponsNum = 4;
 	UPROPERTY(EditDefaultsOnly, Category = "Stat")
@@ -57,18 +72,22 @@ protected:
 	UPROPERTY(VisibleAnywhere, Category = "Weapon")
 	bool HasWeapon = true;
 
-	UPROPERTY(EditAnywhere, Category = "Material")
-	FLinearColor Color = FLinearColor::Black;
-
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 private:
 	FVector InitialLocation;
+	FTimerHandle TimerHandle;
+
+	const int32 TimerMaxCount = 5;
+	int32 TimerCount = 0;
+
 	void PrintTypes();
 	void PrintStringTypes();
 	void PrintTransform();
 	void HandleMovement();
 	void SetMaterialColor(const FLinearColor& NewColor);
+
+	void OnTimerFired();
 };

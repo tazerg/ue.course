@@ -15,12 +15,13 @@ void EmptyLinkFunctionForGeneratedCodeBaseGeometryActor() {}
 // Cross Module References
 	GEOMETRYSANDBOX_API UEnum* Z_Construct_UEnum_GeometrySandbox_EMovementType();
 	UPackage* Z_Construct_UPackage__Script_GeometrySandbox();
+	GEOMETRYSANDBOX_API UScriptStruct* Z_Construct_UScriptStruct_FMaterialData();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FLinearColor();
 	GEOMETRYSANDBOX_API UScriptStruct* Z_Construct_UScriptStruct_FGeometryData();
 	GEOMETRYSANDBOX_API UClass* Z_Construct_UClass_ABaseGeometryActor_NoRegister();
 	GEOMETRYSANDBOX_API UClass* Z_Construct_UClass_ABaseGeometryActor();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FLinearColor();
 // End Cross Module References
 	static UEnum* EMovementType_StaticEnum()
 	{
@@ -76,6 +77,102 @@ void EmptyLinkFunctionForGeneratedCodeBaseGeometryActor() {}
 		}
 		return ReturnEnum;
 	}
+class UScriptStruct* FMaterialData::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern GEOMETRYSANDBOX_API uint32 Get_Z_Construct_UScriptStruct_FMaterialData_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FMaterialData, Z_Construct_UPackage__Script_GeometrySandbox(), TEXT("MaterialData"), sizeof(FMaterialData), Get_Z_Construct_UScriptStruct_FMaterialData_Hash());
+	}
+	return Singleton;
+}
+template<> GEOMETRYSANDBOX_API UScriptStruct* StaticStruct<FMaterialData>()
+{
+	return FMaterialData::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FMaterialData(FMaterialData::StaticStruct, TEXT("/Script/GeometrySandbox"), TEXT("MaterialData"), false, nullptr, nullptr);
+static struct FScriptStruct_GeometrySandbox_StaticRegisterNativesFMaterialData
+{
+	FScriptStruct_GeometrySandbox_StaticRegisterNativesFMaterialData()
+	{
+		UScriptStruct::DeferCppStructOps<FMaterialData>(FName(TEXT("MaterialData")));
+	}
+} ScriptStruct_GeometrySandbox_StaticRegisterNativesFMaterialData;
+	struct Z_Construct_UScriptStruct_FMaterialData_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Color_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Color;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TimerFrequency_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_TimerFrequency;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FMaterialData_Statics::Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Public/BaseGeometryActor.h" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FMaterialData_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMaterialData>();
+	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FMaterialData_Statics::NewProp_Color_MetaData[] = {
+		{ "Category", "Material" },
+		{ "ModuleRelativePath", "Public/BaseGeometryActor.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FMaterialData_Statics::NewProp_Color = { "Color", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FMaterialData, Color), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(Z_Construct_UScriptStruct_FMaterialData_Statics::NewProp_Color_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FMaterialData_Statics::NewProp_Color_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FMaterialData_Statics::NewProp_TimerFrequency_MetaData[] = {
+		{ "Category", "Material" },
+		{ "ModuleRelativePath", "Public/BaseGeometryActor.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FMaterialData_Statics::NewProp_TimerFrequency = { "TimerFrequency", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FMaterialData, TimerFrequency), METADATA_PARAMS(Z_Construct_UScriptStruct_FMaterialData_Statics::NewProp_TimerFrequency_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FMaterialData_Statics::NewProp_TimerFrequency_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FMaterialData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FMaterialData_Statics::NewProp_Color,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FMaterialData_Statics::NewProp_TimerFrequency,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMaterialData_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_GeometrySandbox,
+		nullptr,
+		&NewStructOps,
+		"MaterialData",
+		sizeof(FMaterialData),
+		alignof(FMaterialData),
+		Z_Construct_UScriptStruct_FMaterialData_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FMaterialData_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FMaterialData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FMaterialData_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FMaterialData()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FMaterialData_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_GeometrySandbox();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("MaterialData"), sizeof(FMaterialData), Get_Z_Construct_UScriptStruct_FMaterialData_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMaterialData_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FMaterialData_Hash() { return 3029329807U; }
 class UScriptStruct* FGeometryData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -209,6 +306,10 @@ static struct FScriptStruct_GeometrySandbox_StaticRegisterNativesFGeometryData
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_MovementData;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaterialData_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_MaterialData;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WeaponsNum_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FIntPropertyParams NewProp_WeaponsNum;
@@ -230,10 +331,6 @@ static struct FScriptStruct_GeometrySandbox_StaticRegisterNativesFGeometryData
 #endif
 		static void NewProp_HasWeapon_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_HasWeapon;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Color_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Color;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -263,6 +360,13 @@ static struct FScriptStruct_GeometrySandbox_StaticRegisterNativesFGeometryData
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_MovementData = { "MovementData", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABaseGeometryActor, MovementData), Z_Construct_UScriptStruct_FGeometryData, METADATA_PARAMS(Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_MovementData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_MovementData_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_MaterialData_MetaData[] = {
+		{ "Category", "MaterialData" },
+		{ "ModuleRelativePath", "Public/BaseGeometryActor.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_MaterialData = { "MaterialData", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABaseGeometryActor, MaterialData), Z_Construct_UScriptStruct_FMaterialData, METADATA_PARAMS(Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_MaterialData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_MaterialData_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_WeaponsNum_MetaData[] = {
 		{ "Category", "Weapon" },
@@ -306,22 +410,15 @@ static struct FScriptStruct_GeometrySandbox_StaticRegisterNativesFGeometryData
 		((ABaseGeometryActor*)Obj)->HasWeapon = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_HasWeapon = { "HasWeapon", nullptr, (EPropertyFlags)0x0020080000020001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ABaseGeometryActor), &Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_HasWeapon_SetBit, METADATA_PARAMS(Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_HasWeapon_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_HasWeapon_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_Color_MetaData[] = {
-		{ "Category", "Material" },
-		{ "ModuleRelativePath", "Public/BaseGeometryActor.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_Color = { "Color", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABaseGeometryActor, Color), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_Color_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_Color_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABaseGeometryActor_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_BaseMeshComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_MovementData,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_MaterialData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_WeaponsNum,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_KillsNum,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_Health,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_IsDead,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_HasWeapon,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_Color,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ABaseGeometryActor_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ABaseGeometryActor>::IsAbstract,
@@ -350,7 +447,7 @@ static struct FScriptStruct_GeometrySandbox_StaticRegisterNativesFGeometryData
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABaseGeometryActor, 2954129624);
+	IMPLEMENT_CLASS(ABaseGeometryActor, 733721446);
 	template<> GEOMETRYSANDBOX_API UClass* StaticClass<ABaseGeometryActor>()
 	{
 		return ABaseGeometryActor::StaticClass();
