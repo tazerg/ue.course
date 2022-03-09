@@ -59,4 +59,8 @@ private:
 	void SpawnTenActors();
 	void SpawnFromEditorSettings();
 
+	UFUNCTION()
+	void OnColorChanged(const FLinearColor& Color, const FString& Name);
+	void OnTimerFinished(AActor* Actor);
+
 };

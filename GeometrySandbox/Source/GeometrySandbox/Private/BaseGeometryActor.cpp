@@ -34,6 +34,13 @@ void ABaseGeometryActor::BeginPlay()
 	GetWorldTimerManager().SetTimer(TimerHandle, this, &ABaseGeometryActor::OnTimerFired, MaterialData.TimerFrequency, true);
 }
 
+void ABaseGeometryActor::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+	Super::EndPlay(EndPlayReason);
+
+	UE_LOG(LogTemp, Display, TEXT("Actor %s is destroyed"), *GetName());
+}
+
 // Called every frame
 void ABaseGeometryActor::Tick(float DeltaTime)
 {
@@ -132,12 +139,19 @@ void ABaseGeometryActor::OnTimerFired()
 	if (TimerCount >= TimerMaxCount) 
 	{
 		GetWorldTimerManager().ClearTimer(TimerHandle);
+
+		//Вызов второго делегата
+		OnTimerFinished.Broadcast(this);
+
 		UE_LOG(LogBaseGeometry, Warning, TEXT("Timer has been stopped"));
 		return;
 	}
 
 	const FLinearColor NewColor = FLinearColor::MakeRandomColor();
 	SetMaterialColor(NewColor);
+
+	//Вызов первого делегата
+	OnColorChanged.Broadcast(NewColor, GetName());
 
 	TimerCount++;
 

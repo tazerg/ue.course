@@ -1,11 +1,12 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "Components/StaticMeshComponent.h"
 #include "BaseGeometryActor.generated.h"
+
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnColorChanged, const FLinearColor&, Color, const FString&, Name);
+DECLARE_MULTICAST_DELEGATE_OneParam(FOnTimerFinished, AActor*);
 
 UENUM(BlueprintType)
 enum class EMovementType : uint8
@@ -19,11 +20,11 @@ struct FGeometryData
 {
 	GENERATED_USTRUCT_BODY()
 
-	UPROPERTY(EditAnywhere, Category = "Movement")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
 	float Amplitude = 50.0f;
-	UPROPERTY(EditAnywhere, Category = "Movement")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
 	float Frequency = 2.0f;
-	UPROPERTY(EditAnywhere, Category = "Movement")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
 	EMovementType MoveType = EMovementType::Static;
 };
 
@@ -32,7 +33,7 @@ struct FMaterialData
 {
 	GENERATED_USTRUCT_BODY()
 
-	UPROPERTY(EditAnywhere, Category = "Material")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Material")
 	FLinearColor Color = FLinearColor::Black;
 
 	UPROPERTY(EditAnywhere, Category = "Material")
@@ -61,14 +62,31 @@ public:
 		MaterialData = Data;
 	}
 
+	UFUNCTION(BlueprintCallable)
+	FGeometryData GetMovementData() const 
+	{
+		return MovementData;
+	}
+
+	UFUNCTION(BlueprintCallable)
+	FMaterialData GetMaterialData() const 
+	{
+		return MaterialData;
+	}
+
+	UPROPERTY(BlueprintAssignable)
+	FOnColorChanged OnColorChanged;
+	FOnTimerFinished OnTimerFinished;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
-	UPROPERTY(EditAnywhere, Category = "GeometryData")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "GeometryData")
 	FGeometryData MovementData;
 
-	UPROPERTY(EditAnywhere, Category = "MaterialData")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MaterialData")
 	FMaterialData MaterialData;
 
 	UPROPERTY(EditAnywhere, Category = "Weapon")

@@ -8,6 +8,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+struct FLinearColor;
 #ifdef GEOMETRYSANDBOX_GeometryHubActor_generated_h
 #error "GeometryHubActor.generated.h already included, missing '#pragma once' in GeometryHubActor.h"
 #endif
@@ -21,8 +22,16 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 template<> GEOMETRYSANDBOX_API UScriptStruct* StaticStruct<struct FGeometrySpawnData>();
 
 #define GeometrySandbox_Source_GeometrySandbox_Public_GeometryHubActor_h_30_SPARSE_DATA
-#define GeometrySandbox_Source_GeometrySandbox_Public_GeometryHubActor_h_30_RPC_WRAPPERS
-#define GeometrySandbox_Source_GeometrySandbox_Public_GeometryHubActor_h_30_RPC_WRAPPERS_NO_PURE_DECLS
+#define GeometrySandbox_Source_GeometrySandbox_Public_GeometryHubActor_h_30_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnColorChanged);
+
+
+#define GeometrySandbox_Source_GeometrySandbox_Public_GeometryHubActor_h_30_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnColorChanged);
+
+
 #define GeometrySandbox_Source_GeometrySandbox_Public_GeometryHubActor_h_30_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAGeometryHubActor(); \

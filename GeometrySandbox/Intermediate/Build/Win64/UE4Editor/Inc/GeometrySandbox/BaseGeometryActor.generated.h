@@ -8,29 +8,57 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+struct FLinearColor;
+struct FMaterialData;
+struct FGeometryData;
 #ifdef GEOMETRYSANDBOX_BaseGeometryActor_generated_h
 #error "BaseGeometryActor.generated.h already included, missing '#pragma once' in BaseGeometryActor.h"
 #endif
 #define GEOMETRYSANDBOX_BaseGeometryActor_generated_h
 
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_33_GENERATED_BODY \
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_34_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FMaterialData_Statics; \
 	GEOMETRYSANDBOX_API static class UScriptStruct* StaticStruct();
 
 
 template<> GEOMETRYSANDBOX_API UScriptStruct* StaticStruct<struct FMaterialData>();
 
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_20_GENERATED_BODY \
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_21_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FGeometryData_Statics; \
 	GEOMETRYSANDBOX_API static class UScriptStruct* StaticStruct();
 
 
 template<> GEOMETRYSANDBOX_API UScriptStruct* StaticStruct<struct FGeometryData>();
 
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_45_SPARSE_DATA
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_45_RPC_WRAPPERS
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_45_RPC_WRAPPERS_NO_PURE_DECLS
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_45_INCLASS_NO_PURE_DECLS \
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_8_DELEGATE \
+struct _Script_GeometrySandbox_eventOnColorChanged_Parms \
+{ \
+	FLinearColor Color; \
+	FString Name; \
+}; \
+static inline void FOnColorChanged_DelegateWrapper(const FMulticastScriptDelegate& OnColorChanged, FLinearColor const& Color, const FString& Name) \
+{ \
+	_Script_GeometrySandbox_eventOnColorChanged_Parms Parms; \
+	Parms.Color=Color; \
+	Parms.Name=Name; \
+	OnColorChanged.ProcessMulticastDelegate<UObject>(&Parms); \
+}
+
+
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_46_SPARSE_DATA
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_46_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execGetMaterialData); \
+	DECLARE_FUNCTION(execGetMovementData);
+
+
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_46_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetMaterialData); \
+	DECLARE_FUNCTION(execGetMovementData);
+
+
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_46_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABaseGeometryActor(); \
 	friend struct Z_Construct_UClass_ABaseGeometryActor_Statics; \
@@ -39,7 +67,7 @@ public: \
 	DECLARE_SERIALIZER(ABaseGeometryActor)
 
 
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_45_INCLASS \
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_46_INCLASS \
 private: \
 	static void StaticRegisterNativesABaseGeometryActor(); \
 	friend struct Z_Construct_UClass_ABaseGeometryActor_Statics; \
@@ -48,7 +76,7 @@ public: \
 	DECLARE_SERIALIZER(ABaseGeometryActor)
 
 
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_45_STANDARD_CONSTRUCTORS \
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_46_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ABaseGeometryActor(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ABaseGeometryActor) \
@@ -61,7 +89,7 @@ private: \
 public:
 
 
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_45_ENHANCED_CONSTRUCTORS \
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_46_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ABaseGeometryActor(ABaseGeometryActor&&); \
@@ -72,7 +100,7 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ABaseGeometryActor)
 
 
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_45_PRIVATE_PROPERTY_OFFSET \
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_46_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__MovementData() { return STRUCT_OFFSET(ABaseGeometryActor, MovementData); } \
 	FORCEINLINE static uint32 __PPO__MaterialData() { return STRUCT_OFFSET(ABaseGeometryActor, MaterialData); } \
 	FORCEINLINE static uint32 __PPO__WeaponsNum() { return STRUCT_OFFSET(ABaseGeometryActor, WeaponsNum); } \
@@ -82,27 +110,27 @@ public: \
 	FORCEINLINE static uint32 __PPO__HasWeapon() { return STRUCT_OFFSET(ABaseGeometryActor, HasWeapon); }
 
 
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_42_PROLOG
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_45_GENERATED_BODY_LEGACY \
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_43_PROLOG
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_46_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_45_PRIVATE_PROPERTY_OFFSET \
-	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_45_SPARSE_DATA \
-	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_45_RPC_WRAPPERS \
-	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_45_INCLASS \
-	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_45_STANDARD_CONSTRUCTORS \
+	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_46_PRIVATE_PROPERTY_OFFSET \
+	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_46_SPARSE_DATA \
+	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_46_RPC_WRAPPERS \
+	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_46_INCLASS \
+	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_46_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_45_GENERATED_BODY \
+#define GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_46_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_45_PRIVATE_PROPERTY_OFFSET \
-	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_45_SPARSE_DATA \
-	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_45_RPC_WRAPPERS_NO_PURE_DECLS \
-	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_45_INCLASS_NO_PURE_DECLS \
-	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_45_ENHANCED_CONSTRUCTORS \
+	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_46_PRIVATE_PROPERTY_OFFSET \
+	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_46_SPARSE_DATA \
+	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_46_RPC_WRAPPERS_NO_PURE_DECLS \
+	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_46_INCLASS_NO_PURE_DECLS \
+	GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_46_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
