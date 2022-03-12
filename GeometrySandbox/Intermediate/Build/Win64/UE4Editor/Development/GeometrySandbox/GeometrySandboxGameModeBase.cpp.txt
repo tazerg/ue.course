@@ -5,3 +5,5 @@ C:\Games\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/ServerSt
 C:\Games\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
 C:\Games\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
 C:\UnrealEngine_Projects\ue.course\GeometrySandbox\Intermediate\Build\Win64\UE4Editor\Inc\GeometrySandbox\GeometrySandboxGameModeBase.generated.h
+C:\UnrealEngine_Projects\ue.course\GeometrySandbox\Source\GeometrySandbox\Public\SandboxPawn.h
+C:\UnrealEngine_Projects\ue.course\GeometrySandbox\Intermediate\Build\Win64\UE4Editor\Inc\GeometrySandbox\SandboxPawn.generated.h
