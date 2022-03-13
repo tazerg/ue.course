@@ -4,6 +4,9 @@
 #include "GameFramework/Pawn.h"
 #include "SandboxPawn.generated.h"
 
+//Forward declaration класса (заголовочный файл подключен в .cpp)
+class UCameraComponent;
+
 UCLASS()
 class GEOMETRYSANDBOX_API ASandboxPawn : public APawn
 {
@@ -12,14 +15,21 @@ class GEOMETRYSANDBOX_API ASandboxPawn : public APawn
 public:
 	ASandboxPawn();
 
-	//Не имеет визуального представления
-	//Содержит в себе только трансформацию в мире
-	//К этому компоненту можно аттачить другие компоненты
 	UPROPERTY(VisibleAnywhere)
 	USceneComponent* SceneComponent;
 
+	UPROPERTY(VisibleAnywhere)
+	UStaticMeshComponent* MeshComponent;
+
+	//Отвечает за настройки камеры во ViewPort
+	UPROPERTY(VisibleAnywhere)
+	UCameraComponent* CameraComponent;
+
 	UPROPERTY(EditAnywhere)
 	float Velocity = 300.0f;
+
+	virtual void PossessedBy(AController* NewController) override;
+	virtual void UnPossessed() override;
 
 protected:
 	virtual void BeginPlay() override;

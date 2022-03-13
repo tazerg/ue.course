@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\GeometrySandbox.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{9211606B-5C43-4A70-8E49-83A266468C96}</UniqueIdentifier>
+      <UniqueIdentifier>{518A1333-E334-4158-8CB2-977DEACBDAFA}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GeometrySandbox.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{27C01A99-8B6F-407C-8798-43F546D9F10D}</UniqueIdentifier>
+      <UniqueIdentifier>{6F35769E-3A82-4F1B-846A-8FE454CB9F24}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -23,8 +23,11 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
     <Filter Include="Source\GeometrySandbox">
-      <UniqueIdentifier>{7A0686F5-35DF-4A1F-B51F-8325E61CA97A}</UniqueIdentifier>
+      <UniqueIdentifier>{C79F5621-5898-4ECC-9D0C-A9C77D1546B8}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GeometrySandbox\GeometrySandbox.Build.cs">
       <Filter>Source\GeometrySandbox</Filter>
@@ -42,7 +45,7 @@
       <Filter>Source\GeometrySandbox</Filter>
     </ClInclude>
     <Filter Include="Source\GeometrySandbox\Private">
-      <UniqueIdentifier>{9DE6777D-2FD3-4B15-930D-C977731AC821}</UniqueIdentifier>
+      <UniqueIdentifier>{381A7F30-ED28-4013-83C5-1D5D65DB2F17}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\GeometrySandbox\Private\BaseGeometryActor.cpp">
       <Filter>Source\GeometrySandbox\Private</Filter>
@@ -53,8 +56,11 @@
     <ClCompile Include="..\..\Source\GeometrySandbox\Private\SandboxPawn.cpp">
       <Filter>Source\GeometrySandbox\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\GeometrySandbox\Private\SandboxPlayerController.cpp">
+      <Filter>Source\GeometrySandbox\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\GeometrySandbox\Public">
-      <UniqueIdentifier>{56EC79AF-A0EC-4339-9DCA-7575B2150574}</UniqueIdentifier>
+      <UniqueIdentifier>{CAFEDD84-BAB2-4217-B0D8-A2CDD674AE6E}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\GeometrySandbox\Public\BaseGeometryActor.h">
       <Filter>Source\GeometrySandbox\Public</Filter>
@@ -63,6 +69,9 @@
       <Filter>Source\GeometrySandbox\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\GeometrySandbox\Public\SandboxPawn.h">
+      <Filter>Source\GeometrySandbox\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GeometrySandbox\Public\SandboxPlayerController.h">
       <Filter>Source\GeometrySandbox\Public</Filter>
     </ClInclude>
   </ItemGroup>

@@ -18,6 +18,8 @@ void EmptyLinkFunctionForGeneratedCodeSandboxPawn() {}
 	ENGINE_API UClass* Z_Construct_UClass_APawn();
 	UPackage* Z_Construct_UPackage__Script_GeometrySandbox();
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 // End Cross Module References
 	void ASandboxPawn::StaticRegisterNativesASandboxPawn()
 	{
@@ -36,6 +38,14 @@ void EmptyLinkFunctionForGeneratedCodeSandboxPawn() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SceneComponent_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SceneComponent;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MeshComponent_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MeshComponent;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CameraComponent_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CameraComponent;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Velocity_MetaData[];
 #endif
@@ -58,12 +68,29 @@ void EmptyLinkFunctionForGeneratedCodeSandboxPawn() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASandboxPawn_Statics::NewProp_SceneComponent_MetaData[] = {
 		{ "Category", "SandboxPawn" },
-		{ "Comment", "//?? ????? ??????????? ?????????????\n//???????? ? ???? ?????? ????????????? ? ????\n//? ????? ?????????? ????? ???????? ?????? ??????????\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/SandboxPawn.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASandboxPawn_Statics::NewProp_SceneComponent = { "SceneComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASandboxPawn, SceneComponent), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASandboxPawn_Statics::NewProp_SceneComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASandboxPawn_Statics::NewProp_SceneComponent_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASandboxPawn_Statics::NewProp_MeshComponent_MetaData[] = {
+		{ "Category", "SandboxPawn" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/SandboxPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASandboxPawn_Statics::NewProp_MeshComponent = { "MeshComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASandboxPawn, MeshComponent), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASandboxPawn_Statics::NewProp_MeshComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASandboxPawn_Statics::NewProp_MeshComponent_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASandboxPawn_Statics::NewProp_CameraComponent_MetaData[] = {
+		{ "Category", "SandboxPawn" },
+		{ "Comment", "//???????? ?? ????????? ?????? ?? ViewPort\n" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/SandboxPawn.h" },
+		{ "ToolTip", "???????? ?? ????????? ?????? ?? ViewPort" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASandboxPawn_Statics::NewProp_CameraComponent = { "CameraComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASandboxPawn, CameraComponent), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASandboxPawn_Statics::NewProp_CameraComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASandboxPawn_Statics::NewProp_CameraComponent_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASandboxPawn_Statics::NewProp_Velocity_MetaData[] = {
 		{ "Category", "SandboxPawn" },
@@ -73,6 +100,8 @@ void EmptyLinkFunctionForGeneratedCodeSandboxPawn() {}
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASandboxPawn_Statics::NewProp_Velocity = { "Velocity", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASandboxPawn, Velocity), METADATA_PARAMS(Z_Construct_UClass_ASandboxPawn_Statics::NewProp_Velocity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASandboxPawn_Statics::NewProp_Velocity_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASandboxPawn_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASandboxPawn_Statics::NewProp_SceneComponent,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASandboxPawn_Statics::NewProp_MeshComponent,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASandboxPawn_Statics::NewProp_CameraComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASandboxPawn_Statics::NewProp_Velocity,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ASandboxPawn_Statics::StaticCppClassTypeInfo = {
@@ -102,7 +131,7 @@ void EmptyLinkFunctionForGeneratedCodeSandboxPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASandboxPawn, 2997580747);
+	IMPLEMENT_CLASS(ASandboxPawn, 1079224095);
 	template<> GEOMETRYSANDBOX_API UClass* StaticClass<ASandboxPawn>()
 	{
 		return ASandboxPawn::StaticClass();
