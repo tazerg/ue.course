@@ -1,5 +1,0 @@
-C:\UnrealEngine_Projects\ue.course\GeometrySandbox\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandbox\Definitions.GeometrySandbox.h
-C:\Games\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-C:\Games\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-C:\UnrealEngine_Projects\ue.course\GeometrySandbox\Source\GeometrySandbox/Public/BaseGeometryActor.h
-C:\UnrealEngine_Projects\ue.course\GeometrySandbox\Intermediate\Build\Win64\UE4Editor\Inc\GeometrySandbox\BaseGeometryActor.generated.h
