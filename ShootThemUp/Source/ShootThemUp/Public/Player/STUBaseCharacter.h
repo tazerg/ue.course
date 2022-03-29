@@ -15,7 +15,8 @@ class SHOOTTHEMUP_API ASTUBaseCharacter : public ACharacter
     GENERATED_BODY()
 
 public:
-    ASTUBaseCharacter();
+    //конструктор с параметром в котором передаётся объект инициализации
+    ASTUBaseCharacter(const FObjectInitializer& ObjInit);
 
 protected:
     //Необходим для связывания вращения вокруг компонента персонажа а не вокруг точки камеры
@@ -30,7 +31,15 @@ public:
     virtual void Tick(float DeltaTime) override;
     virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+    UFUNCTION(BlueprintCallable, Category = "Movement")
+    bool IsRunning() const;
+
 private:
+    bool WantsToRun = false;
+    bool IsMovingForward = false;
+
     void MoveFroward(float Amount);
     void MoveRight(float Amount);
+    void EnableAcceleration();
+    void DisableAcceleration();
 };
