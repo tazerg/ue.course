@@ -9,6 +9,8 @@
 #include "Components/STUHealthComponent.h"
 #include "Components/TextRenderComponent.h"
 
+DEFINE_LOG_CATEGORY_STATIC(LogBaseCharacter, All, All);
+
 ASTUBaseCharacter::ASTUBaseCharacter(const FObjectInitializer& ObjInit) 
     : Super(
         ObjInit.SetDefaultSubobjectClass<USTUCharacterMovementComponent>(
@@ -37,15 +39,16 @@ void ASTUBaseCharacter::BeginPlay()
     //ћакросы которые кидают ассерты если в переменной null
     check(HealthComponent);
     check(HealthTextComponent);
+    check(GetCharacterMovement());
+
+    OnHealthChanged(HealthComponent->GetHealth());
+    HealthComponent->OnDeath.AddUObject(this, &ASTUBaseCharacter::OnDeath);
+    HealthComponent->OnHealthChanged.AddUObject(this, &ASTUBaseCharacter::OnHealthChanged);
 }
 
 void ASTUBaseCharacter::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
-
-    const auto Health = HealthComponent->GetHealth();
-    HealthTextComponent->SetText(
-        FText::FromString(FString::Printf(TEXT("%.0f"), Health)));
 }
 
 void ASTUBaseCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -119,4 +122,21 @@ float ASTUBaseCharacter::GetMovementDirection() const
         NormalizedVelocity);
     const auto Degrees = FMath::RadiansToDegrees(AngleBetween);
     return CrossProduct.IsZero() ? Degrees : Degrees * FMath::Sign(CrossProduct.Z);
+}
+
+void ASTUBaseCharacter::OnDeath()
+{
+    UE_LOG(LogBaseCharacter, Display, TEXT("Character %s id Dead"), *GetName());
+
+    //ѕроигрывание анимации смерти
+    PlayAnimMontage(DeathAnimMontage);
+
+    GetCharacterMovement()->DisableMovement();
+    SetLifeSpan(5.f);
+}
+
+void ASTUBaseCharacter::OnHealthChanged(float HealthValue) const
+{
+    HealthTextComponent->SetText(
+        FText::FromString(FString::Printf(TEXT("%.0f"), HealthValue)));
 }

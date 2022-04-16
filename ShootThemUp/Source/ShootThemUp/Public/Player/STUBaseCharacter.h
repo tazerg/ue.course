@@ -34,6 +34,11 @@ protected:
     //Необходим для визуализации текста в мире
     UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
     UTextRenderComponent* HealthTextComponent;
+
+    //Анимация смерти
+    UPROPERTY(EditDefaultsOnly, Category = "Animation")
+    UAnimMontage* DeathAnimMontage;
+    
     virtual void BeginPlay() override;
 
 public:
@@ -54,4 +59,6 @@ private:
     void MoveRight(float Amount);
     void EnableAcceleration();
     void DisableAcceleration();
+    void OnDeath();
+    void OnHealthChanged(float HealthValue) const;
 };
