@@ -8,6 +8,7 @@
 #include "Components/STUCharacterMovementComponent.h"
 #include "Components/STUHealthComponent.h"
 #include "Components/TextRenderComponent.h"
+#include "GameFramework/Controller.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogBaseCharacter, All, All);
 
@@ -133,6 +134,12 @@ void ASTUBaseCharacter::OnDeath()
 
     GetCharacterMovement()->DisableMovement();
     SetLifeSpan(5.f);
+
+    if (!Controller)
+        return;
+
+    //Переключаем контроллер на спектатора
+    Controller->ChangeState(NAME_Spectating);
 }
 
 void ASTUBaseCharacter::OnHealthChanged(float HealthValue) const
