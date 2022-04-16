@@ -38,6 +38,11 @@ protected:
     //Анимация смерти
     UPROPERTY(EditDefaultsOnly, Category = "Animation")
     UAnimMontage* DeathAnimMontage;
+
+    UPROPERTY(EditDefaultsOnly, Category = "Movement")
+    FVector2D LandedDamageVelocity = FVector2D(900.f, 1300.f);
+    UPROPERTY(EditDefaultsOnly, Category = "Movement")
+    FVector2D LandedDamage = FVector2D(10.f, 80.f);
     
     virtual void BeginPlay() override;
 
@@ -61,4 +66,7 @@ private:
     void DisableAcceleration();
     void OnDeath();
     void OnHealthChanged(float HealthValue) const;
+
+    UFUNCTION()
+    void OnGroundLanded(const FHitResult& HitResult);
 };
