@@ -14,7 +14,7 @@ class SHOOTTHEMUP_API ASTUDevDamageActor : public AActor
 public:	
 	ASTUDevDamageActor();
 
-    //Компонент для добавления трансформации и перемещения актора по сцене
+    //РљРѕРјРїРѕРЅРµРЅС‚ РґР»СЏ РґРѕР±Р°РІР»РµРЅРёСЏ С‚СЂР°РЅСЃС„РѕСЂРјР°С†РёРё Рё РїРµСЂРµРјРµС‰РµРЅРёСЏ Р°РєС‚РѕСЂР° РїРѕ СЃС†РµРЅРµ
     UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
     USceneComponent* SceneComponent;
     UPROPERTY(EditAnywhere, BlueprintReadWrite)

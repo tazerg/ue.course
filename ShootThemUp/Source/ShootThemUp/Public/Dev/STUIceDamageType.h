@@ -7,7 +7,7 @@
 #include "STUIceDamageType.generated.h"
 
 /**
- * Класс отвечающий за поражение льдом
+ * РљР»Р°СЃСЃ РѕС‚РІРµС‡Р°СЋС‰РёР№ Р·Р° РїРѕСЂР°Р¶РµРЅРёРµ Р»СЊРґРѕРј
  */
 UCLASS()
 class SHOOTTHEMUP_API USTUIceDamageType : public UDamageType

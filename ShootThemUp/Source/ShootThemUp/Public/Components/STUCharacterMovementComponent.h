@@ -12,10 +12,10 @@ class SHOOTTHEMUP_API USTUCharacterMovementComponent : public UCharacterMovement
 	GENERATED_BODY()
 	
 public:
-    //meta - мета информация которая помогает указать диапазон доступных значений.
+    //meta - РјРµС‚Р° РёРЅС„РѕСЂРјР°С†РёСЏ РєРѕС‚РѕСЂР°СЏ РїРѕРјРѕРіР°РµС‚ СѓРєР°Р·Р°С‚СЊ РґРёР°РїР°Р·РѕРЅ РґРѕСЃС‚СѓРїРЅС‹С… Р·РЅР°С‡РµРЅРёР№.
     UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Movement", meta = (ClampMin = "1.5", ClampMax = "3.0"))
     float RunModifier = 2.f;
 
-    //Переопределяем функцию возвращающую максимальную скорость
+    //РџРµСЂРµРѕРїСЂРµРґРµР»СЏРµРј С„СѓРЅРєС†РёСЋ РІРѕР·РІСЂР°С‰Р°СЋС‰СѓСЋ РјР°РєСЃРёРјР°Р»СЊРЅСѓСЋ СЃРєРѕСЂРѕСЃС‚СЊ
     virtual float GetMaxSpeed() const override;
 };

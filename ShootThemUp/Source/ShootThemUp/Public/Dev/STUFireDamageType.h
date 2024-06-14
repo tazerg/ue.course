@@ -7,7 +7,7 @@
 #include "STUFireDamageType.generated.h"
 
 /**
- * Класс отвечающий за поражение огнём
+ * РљР»Р°СЃСЃ РѕС‚РІРµС‡Р°СЋС‰РёР№ Р·Р° РїРѕСЂР°Р¶РµРЅРёРµ РѕРіРЅС‘Рј
  */
 UCLASS()
 class SHOOTTHEMUP_API USTUFireDamageType : public UDamageType
